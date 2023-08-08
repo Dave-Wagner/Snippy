@@ -9,7 +9,6 @@ Snippy's sorcery is particularly potent when casting spells with ChatGPT, as it 
 - [x] Lightning fast copying of all open files
 - [x] Exorcises newlines, spaces, and tabs (spellcasting with Python remains untested)
 - [x] Customizable separator sequence format with magical runes like FILE_NAME, FILE_NAME_WITH_PATH, LAST_MODIFIED, TIMESTAMP, and LAST_MODIFIED_DATE
-- [x] User options to transmute the content of most code files (in the clipboard) using the mystical minify package for html, css, js and img (css-base64-images)
 
 ## ✨ Enchanting Usage
 
