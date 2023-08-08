@@ -73,7 +73,7 @@ And with this license, we take flight!
 
 So let us dance with Snippy's might,
 And share our code with utmost delight.
-For with MIT, we cast our charm,
+For with [MIT](https://mit-license.org/), we cast our charm,
 And spread our magic with open arms!
 
 <details>
