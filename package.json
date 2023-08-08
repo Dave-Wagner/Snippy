@@ -1,0 +1,80 @@
+{
+  "name": "snippy",
+  "publisher": "davewagner",
+  "license": "MIT",
+  "version": "0.3.1",
+  "displayName": "Snippy",
+  "description": "Effortlessly copy open files' content to the clipboard without newlines.",
+  "author": {
+    "name": "David Wagner",
+    "email": "20711387+Dave-Wagner@users.noreply.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dave-Wagner/Snippy"
+  },
+  "engines": {
+    "vscode": "^1.76.0",
+    "node": ">=18.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.snippy",
+        "title": "Snippy: Copy all editors to clipboard"
+      }
+    ],
+    "menus": {
+      "editor/title/context": [
+        {
+          "command": "extension.snippy",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": [
+      {
+        "title": "Snippy",
+        "properties": {
+          "snippy.separatorFormat": {
+            "type": "string",
+            "default": "<#-(FILE_NAME_WITH_PATH)-#>",
+            "description": "The format of the separator between files. The following variables are available:\n\nFILE_NAME,\nFILE_NAME_WITH_PATH,\nLAST_MODIFIED,\nTIMESTAMP,\nLAST_MODIFIED_DATE"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "yarn run compile && yarn run lint && node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/sinon": "^10.0.13",
+    "@types/vscode": "^1.76.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vscode/test-electron": "^2.2.3",
+    "chai": "^4.3.7",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "vscode-test": "^1.6.1"
+  }
+}
